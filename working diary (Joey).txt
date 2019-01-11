@@ -1,0 +1,87 @@
+week1
+
+This week, I mainly finished learning javasript, and web3.js. Design basic UI and testing UI, design layers and modules division, as well as determine business process (scenarios and workflow).
+dev with good UI templates (css, js, free open source library like bootstrap)
+Front end modules division: Cache, Shopping cart, Security, Selling Items, item information, home, search, item modification, transaction history.
+Write proposal, attend meeting, make both long-term and short-term plans, place cards on Trello and organise different kinds of meetings.
+
+week2
+Learn and implement first module Searching with javascript and relevant libraries as well as tools.
+This is mainly about eventListener, event and attributes with most of tags,
+how to use jquery and native javascript, together with html.
+Learn something of AWS - EC2, S3, DNS, ports, security group
+and how to use docker to deploy flask and how to send POST/GET request to server.
+finish proposal, organise and recorded meetings.
+
+week3
+develop front-end home page, troller buttons, data-scroll, tags
+finish item information page, selling items page, searching page local demo.
+deploy a LAMP on AWS, try to develop with php, but not good with a p2p architecture.
+finish a simple flask server on AWS and succeed in communicate with server in local
+with data and get a returned result.
+design front-end structures and finish modules design of most of parts.
+
+week4
+Finish deployment with docker on AWS with a simple flask server.
+Bug solved with http's CROS problems,
+set hashlib in server and finish md5 checking demo.
+Front-end: finish home page, simple tracking and juming menus, basic design of each module.
+
+week5
+Finish javascript functions and ui design of modules including: Searching items, selling items, item information.
+First imigration with web3.js. Merge all those kinds of modules into different layers. List functions and support needed parts for future development. Finish parts of Helper modules to support daily development.
+Now, users: could search items with data from solidity, could check item information.
+Determine interfaces of data arrays with Frank and add some kinds of testing data and make two scenarios: searching and checking items available.
+prepare for first demo.
+
+week6
+First demo, finish migration. Finish new front-end pages and develop first two layers with javascript and relevant web tools.
+Finish filters in searching part with data fetched from web3.js
+Finish searching items module which would be used to communicate with web3.js
+Finish item information module with web3.js and demo just in team.
+start front-end and js functions of shopping cart module.
+Make another long-term plan for future development and migration.
+
+week7
+Finish shopping cart module, Cache module, Work flow module and modules did in last sprints.
+Finish login in module with validation from AWS server, design check methods in both js and flask sides. Researching of Firebase with Andrew.
+Working with teammates about image upload and download. Contruct and split returned url from firebase and store in block chain. Solve bugs caused by gas cost in solidity and synchronouze (both in solidity and javascript sides)
+finish functions and UI of item modification/new
+migrate with web3.js
+
+week8
+bug shooting: module jump, post function, filebase upload,
+bug shooting: shopping cart amount, sync with web3.js, sync with login check,
+bug shooting: filebase url reconstruction and storage
+bug shooting: tag button jumping functions
+testing: searching-item information-adding to shopping cart-pay
+migrate: pay function with web3.js
+new UI design and functions refraction
+rewrite cookie part, login part, security part.
+New module: work flow, for control user's focus in our single page
+
+week9
+bug shooting: wrong data in front-end, work flow module wrong hidden
+bug shooting: web3.js precision
+bug shooting: img src reconstruction with filebase
+tags' redesign, module redesign, business work flow checking
+finish all front-end and middle layers.
+divide js functions into different modules. Refraction of codes for modules redesign and implementation. Double migrate: with Andrew for only front-end and middle part; and with Frank for the whole project
+migrate with web3.js
+sync bug shooting
+
+week10
+prepare for demo
+bug shooting: wrong hidden, searching result with old items' information
+bug shooting: data/attributes sync with data in web3.js in each operation
+bug shooting: front-end SC add/delete switch onclick functions
+finish all process testing
+finish demo testing
+finish preparation of demo
+modify trello
+
+week11
+writing reports
+project testing
+prepare materials
+sort out meeting history and rewrite working diary.

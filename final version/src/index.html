@@ -1,0 +1,2574 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Home</title>
+
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="">
+
+<meta name="keywords" content="">
+
+<!-- Latest compiled and minified CSS -->
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+
+<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+<div id="loader" >
+
+        <p class="text-center">Loading...</p>
+
+</div>
+
+<div id="content">
+
+<header>
+
+<nav class="navbar navbar-fixed-top" id="header-nav">
+
+<div class="container-fluid">
+
+<!--<div class="navbar-header">
+
+	<a class="navbar-brand" href="#">
+
+		<img src="img/logo.png" alt="Wooster logo" />
+
+	</a>
+
+</div>
+
+-->
+
+<div class="primary-menu">
+
+	<a type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+			<span class="sr-only">Toggle navigation</span>
+
+			<span class="icon-bar"></span>
+
+			<span class="icon-bar"></span>
+
+			<span class="icon-bar"></span>
+
+	</a>
+
+	<div id="navbar" class="navbar-collapse collapse">
+
+		 <ul class="nav navbar-nav">
+
+			<li><a data-scroll href="#">Home</a></li>
+
+			<li><a  id="TC_SC" data-scroll href="#shoppingCart" >Shopping Cart</a></li>
+
+			<li><a  id="TC_TH" data-scroll href="#portfolio" onclick="WF_transactionSection()">Transaction</a></li>
+
+			<li style="display:none;"><a data-scroll href="#Item_Information">Item Info</a></li>
+
+			<li><a  id="TC_SR" data-scroll href="#Searching_Items">Searching</a></li>
+
+            <li style="display:none;"><a data-scroll href="#ModifyItems">Modify Items</a></li>
+
+            <!-- /////////////////////////////// modify by G -->
+
+            <li><a  id="TC_SI" data-scroll href="#Selling_item" onclick="WF_sellingSection()">Selling Items</a></li>
+
+		</ul>
+
+	</div>
+
+</div>
+
+
+
+</div>
+
+</nav>
+
+  
+
+<div class="main-head">
+
+ <div class="container">
+
+	 <div class="row">
+
+		<div id="TOP_BTN" class="col-md-8 col-md-offset-2">
+
+			<h4 style="color:white">Lok'tar Ogar</h4>
+
+			<div  style="color:white" class="divider"></div>
+
+			<h1 style="color:white">Online Bookshop</h1>
+
+
+		</div>
+
+	</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!--zsc-->
+
+<div class="call-to-action">
+
+</div>
+
+
+<section hidden  id="UM_TU_WD">
+<div class="container">
+
+    <div class="row">
+
+       <div  class="col-md-11 col-md-offset-1">
+
+           <h4>Account Management</h4>
+
+           <div class="row">
+
+               <form class="form-inline">
+                       
+                       <div class="col-md-6    ">
+
+                           <input id="top_up_amount"  type="number" style="background-color: black;color:white;" placeholder="Enter the number you wanna top up..." class="subscribe-input" name="text">
+
+                       </div>
+
+                   <div class="col-md-4">
+
+                       <a id="button" onclick="SE_TOP_UP();"  type = "submit"  class="btn btn-primary" style="background-color:white;">Top up</a>
+
+                       <a id="button" onclick="SE_WITHDRAW();"  type = "submit"  class="btn btn-primary" style="background-color:white;margin-left:25px;">Withdraw</a>
+
+                   </div>
+                   <div class="col-md-2">
+
+                       <h4 id="accountAddress" class="text-center"></h4>
+
+                   </div>
+
+               </form>
+
+           </div>
+
+       </div>
+   </div>
+
+</div>
+</section>
+<section hidden id="Item_Information" style="margin-top:50px;" class="no-padding">
+
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-md-6 section-text">
+
+			<div class="title title-left">
+
+				<h2 id="II_Name">Item Information</h2>
+
+				<div class="divider divider-sm"></div>
+
+                <h4 id="II_Price">Price:14.00</h4>
+
+				<div class="divider divider-sm"></div>
+
+                <h4 id="II_Amount">Amount:15</h4>
+
+				<div class="divider divider-sm"></div>
+
+                <h4 id="II_Seller">Seller:Franky</h4>
+
+				<div class="divider divider-sm"></div>
+
+                <h4>Description:</h4>
+
+                <h5 id="II_Description">LALALALALA AKDJLFKJSL jflasdjfljk</h5>
+
+				<div class="divider divider-sm"></div>
+
+			</div>
+
+			
+
+			<a id="II_AddSC" class="btn btn-primary">Add To Shopping Cart</a>
+
+		</div>
+
+		<div class="col-md-4">
+
+			<img id="II_Img" style="margin-bottom:70px;"  src="img/typewriter.jpg" class="img-responsive">
+
+			<a id="II_Sub" class="btn btn-primary">Sub</a>
+
+            <input id="II_Input" type="text" name="amount1" style="width:20%;height:40px; margin-left:30px;margin-right:30px;"  value="1"/>
+
+			<a id="II_Add" class="btn btn-primary">Add</a>
+
+		</div>
+        
+    </div>
+    <div class="row" id="write_comment" style="display: none">
+            <h2>Add your comment</h2>
+            <div class="row">
+                <div class="star-rating"> 
+                        <fieldset> 
+                            <input type="radio" id="star5" name="rating" value="5" /><label for="star5" ></label> 
+                            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" ></label> 
+                            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" ></label> 
+                            <input type="radio" id="star2" name="rating" value="2" /><label for="star2"></label> 
+                            <input type="radio" id="star1" name="rating" value="1" /><label for="star1" ></label> 
+                        </fieldset> 
+                </div>
+                    <div>
+                      <label>Your Review:</label>
+                      <!-- <textarea class="content comment-input" placeholder="Please enter a comment…" onkeyup="keyUP(this)"></textarea> -->
+                      <textarea class="form-control" rows="6" cols="50" id = "customer_review" placeholder="Please enter a comment…" style=" font-size: 18px"></textarea>
+                    </div>
+                    <div>
+                      <button class="btn btn-primary" onclick="add_comment()" id ="add_comment_btn">Submit<i class="ps-icon-next"></i></button>
+                    </div>
+
+                
+            </div>
+    </div>
+    <div class="row" id="comments" style="display: none">
+			<div class="tab-pane" role="tabpanel" id="tab_02">
+                    <h1 class="mb-20">Comments</h1>
+                    <div  id = "reviews">
+                      <div class="reviews_content">
+                            <div class="star-rating-checked"> 
+
+                                    <fieldset> 
+                              
+                                      <input type="radio" value="5" /><label ></label> 
+                              
+                                      <input type="radio" value="4" /><label ></label> 
+                              
+                                      <input type="radio"  value="3" checked="true"/><label ></label> 
+                              
+                                      <input type="radio" value="2" /><label></label> 
+                              
+                                      <input type="radio" value="1" /><label ></label> 
+                              
+                                    </fieldset> 
+                              
+                                  </div>
+                          <p>By<strong> Alena Studio</strong> - 10:34 15/5/2018</p>
+                        <p>Soufflé danish gummi bears tart. Pie wafer icing. Gummies jelly beans powder. Chocolate bar pudding macaroon candy canes chocolate apple pie chocolate cake. Sweet caramels sesame snaps halvah bear claw wafer. Sweet roll soufflé muffin topping muffin brownie. Tart bear claw cake tiramisu chocolate bar gummies dragée lemon drops brownie.</p>
+                      </div>
+                    </div>
+    </div>
+
+</div>
+
+</section>
+
+<section hidden class="shoppingCart" id="shoppingCart">
+
+<div class="col-md-8 col-md-offset-2">
+
+	<div class="title text-center">
+
+		<h2>Shopping Cart.</h2>
+
+		<div class="divider divider-lg"></div>
+
+		<p>Data of shopping cart would be saved in local browser, careful when you clean history or cache.</p>
+
+    </div>
+    
+
+</div>
+
+<div class="container">
+
+	<div  class="row team">
+
+		<div id="SC_Sample" hidden="true" class="col-md-3 col-sm-6">
+
+			<div class="team-member">
+
+				<img src="img/team/img2.jpg" class="img-responsive">
+
+				<h6>
+
+                    <a type="submit" style="background-color:gray;padding:5px;margin-right:10px;margin-bottom:13px" class="btn btn-primary">Sub</a>
+
+                    <input type="text" name="amount1" style="width:15%;color:black; margin-bottom:10px;" value="1"/>
+
+                    <a type="submit" style="background-color:gray;padding:5px;margin-left:10px;margin-bottom:13px" class="btn btn-primary">Add</a>
+
+                    <a type="submit" style="background-color:gray;padding:5px;margin-right:10px;margin-bottom:13px" class="btn btn-primary">Delete</a><br />
+
+                    Product Name:Item2
+
+                    <a type="submit" style="background-color:gray;padding:5px;margin-left:20px;margin-bottom:13px" class="btn btn-primary">Pay</a>
+
+                </h6>
+
+			</div>
+
+           </div> 
+
+        <div id="SC_List">
+
+		</div>
+
+	<div class="row">
+
+		<div class="col-md-12 text-right">
+
+			<a id="SC_Close" type="submit" style="margin-right:30px" class="btn btn-primary">Close</a>
+
+			<a id="SC_Clean" type="submit" class="btn btn-primary">Clean</a>
+
+		</div>
+
+	</div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section hidden class="SpaceCard1" id ="Selling_item">
+
+<div class="col-md-8 col-md-offset-2">
+
+	<div class="title text-center">
+
+		<h2>Selling Books.</h2>
+
+		<div class="divider divider-lg"></div>
+
+		<p>Here are all the books sold by you now.</p>
+
+	</div>
+
+</div>
+
+<div class="container">
+
+        <!--zsc-->
+		<div id="SI_Sample" hidden class="col-md-4 col-sm-8">
+
+			<div class="team-member">
+
+				<img src="img/team/img1.jpg" class="img-responsive">
+
+				<h6>
+
+                    <a type="submit" style="background-color:gray;padding:5px;margin-right:10px;" class="btn btn-primary">Delete</a>
+
+                    Item2
+
+                    <a type="submit" style="background-color:gray;padding:5px;margin-left:10px;" class="btn btn-primary">Modify</a>
+
+                </h6>
+
+			</div>
+
+		</div>
+
+	<div id="SI_List" class="row team">
+
+	</div>
+
+	<div class="row team">
+
+        <div class="row">
+
+            <div class="col-md-12 text-right">
+
+                <a type="submit" style="margin-right:30px" class="btn btn-primary" onclick="SI_init()">Refresh</a>
+
+                <a onclick= "SI_shellNewItems()" type="submit" class="btn btn-primary">New Item</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<section id="Searching_Items">
+
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-md-8 col-md-offset-2">
+
+			<div class="title">
+
+				<h2>Searching result.</h2>
+
+				<div class="divider divider-lg"></div>
+
+				<p>Data of shopping cart would be saved in local browser, careful when you clean history or cache.</p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="SR_Sample" hidden class="col-md-3 col-sm-6">
+
+		<div class="team-member">
+
+			<img src="img/team/img1.jpg" class="img-responsive">
+
+			<h6>Item1</h6>
+
+		</div>
+
+	</div>
+
+	<div id="SR_List" class="row team">
+
+	</div>
+
+</div>
+
+<div class="call-to-action">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-md-10 col-md-offset-1">
+
+				<h4>Searching Books</h4>
+
+				<div class="row">
+
+					<form class="form-inline">
+
+						<div class="col-md-9    ">
+
+							<input id="SR_Input" type="text" placeholder="Enter your interests..." class="subscribe-input" name="text">
+
+						</div>
+
+						<div class="col-md-3">
+
+                            <a id="SR_SearchBtn"  class="btn btn-primary" style="background-color:white;">Searching</a>
+
+                        </div>
+
+                        <!-- /////////////////////////////// modify by G -->
+
+                        <!-- <div class="col-md-3">
+
+                                <a id="SR_WatchBtn" class="btn btn-primary" style="background-color:white;">Watch</a>
+
+                        </div> -->
+
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+</section>
+
+
+
+
+<<!-- zsc -->
+
+<section id="loginpage">
+
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-10 col-md-offset-1">
+
+                        <h4>Login Page</h4>
+
+                        <div class="row">
+
+                            <form class="form-inline">
+                                    
+                                    <div class="col-md-4    ">
+
+                                        <input id="SE_UName" style="background-color: black;color:white;" type="text" placeholder="Enter your user name..." class="subscribe-input" name="text">
+
+                                    </div>
+
+                                    <div class="col-md-4    ">
+
+                                        <input id="SE_Psword" style="background-color: black;color:white;" type="text" placeholder="Enter your password..." class="subscribe-input" name="text">
+
+                                    </div>
+
+                                <div class="col-md-4">
+
+                                    <a id="SE_BTN"  class="btn btn-primary" style="background-color:white;">Login</a>
+                                    <!--zsc-->
+                                    <a id="SE_REG"  class="btn btn-primary" style="background-color:white;margin-left:25px;">Sign up</a>
+
+                                </div>
+
+                                <!-- /////////////////////////////// modify by G -->
+
+                                <!-- <div class="col-md-3">
+
+                                        <a id="SR_WatchBtn" class="btn btn-primary" style="background-color:white;">Watch</a>
+
+                                </div> -->
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+</section>
+
+
+
+<section hidden id="ModifyItems">
+
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-md-8 col-md-offset-2">
+
+			<div class="title text-center">
+
+				<h2 id="IM_Header">Modify your Books</h2>
+
+				<h6>All modification would be checked</h6>
+
+		</div>
+
+	</div>
+
+<form>
+
+	<div class="row">
+
+		<div class="col-md-6" style="margin-top:20px;">
+
+            <div class="form-group">
+
+                <a class="navbar-brand" href="#">
+
+                    <img id="IM_CurrentImg" style="max-width:80%" src="https://firebasestorage.googleapis.com/v0/b/comp9900-13cd5.appspot.com/o/images%2FGOT1.jpg?alt=media&token=cf1f52cd-dfed-4f5c-8eed-6f901cb8af54" alt="Wooster logo" />
+
+                </a>
+
+            </div>
+
+            <!--
+
+            <div class="form-group" style="margin-top:350px">
+
+                <a class="navbar-brand" href="#">
+
+                    <a id="IM_NewImg" type="submit" class="btn btn-primary">New Image</a>
+
+                </a>
+
+                <a class="navbar-brand" href="#">
+
+                    <a id="IM_SaveImg" type="submit" class="btn btn-primary">Save Image</a>
+
+                </a>
+
+            </div>-->
+
+        </div>
+
+		<div class="col-md-6" style="margin-top:30px;">
+
+			<div class="form-group">
+
+                <h4>Name:</h4>
+
+				<input id="IM_Name" type="text" name="Name" class="form-control" placeholder="Name*">
+
+			</div>
+
+			<div class="form-group">
+
+                <h4>Amount:</h4>
+
+				<input id="IM_Amount" type="text" name="Amount" class="form-control" placeholder="Amount*">
+
+			</div>
+
+			<div class="form-group">
+
+                <h4>Price(AUD):</h4>
+
+				<input id="IM_Price" type="text" name="Price" class="form-control" placeholder="Price*">
+
+			</div>
+
+                <h4>Description:</h4>
+
+				<textarea id="IM_Description" class="form-control" placeholder="Description should be less than or equal to 240 letters"></textarea>
+
+		</div>
+
+	</div>
+
+	<div class="row">
+
+		<div class="col-md-12 text-right">
+
+			<a id="IM_SaveBtn" type="submit" style="margin-right:30px" class="btn btn-primary">Add</a>
+
+			<a id="IM_CancelBtn" type="submit" class="btn btn-primary">Cancel</a>
+
+            <a id="IM_ImageBtn" style="margin-left:30px" class="btn btn-primary">
+
+            New Image
+
+            </a>
+
+		    <input style="display:none;" id="uploadFileInput" type="file" accept="image/*"  />
+
+		</div>
+
+	</div>
+
+</form>
+
+</div>
+
+</section>
+
+<section hidden class="portfolio" id="portfolio">
+
+<div class="col-md-8 col-md-offset-2">
+
+	<div class="title text-center">
+
+		<h2>Transaction History</h2>
+
+		<h6>See your historical transaction records</h6>
+
+		<div class="divider divider-lg"></div>
+
+	</div>
+
+</div>
+
+<div class="container" id="portfolio-grid">
+
+	<nav class="centered-pills clearfix">
+
+		<ul class="nav nav-pills" >
+
+			<li><a href="javascript:void(0);" class="filter active" data-filter="all">All</a></li>
+
+			<li><a href="javascript:void(0);" class="filter" data-filter=".selling">Selling</a></li>
+
+			<li><a href="javascript:void(0);" class="filter" data-filter=".buying">Buying</a></li>
+
+		</ul>
+
+	</nav>
+
+	<div id="TH_List" class="row">
+
+	</div>
+
+</div>
+
+</section>
+
+</div>
+
+<script src="js/jquery-1.11.0.min.js"></script>
+
+<script src="js/jquery.mixitup.js"></script>
+
+<script src="js/app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase-firestore.js"></script>
+
+<script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.min.js"></script>
+
+<!-- <link rel="preload" href="main.js" as="script"> -->
+
+<script>
+
+// ------------------------------------------
+
+// ---------------Security-------------------
+
+// ------------------------------------------
+
+$.ajaxSetup({  
+
+    async : false  
+
+});    
+
+function SE_reg(){
+
+    var u = HP_getDomValById("SE_UName");
+
+    var p = HP_getDomValById("SE_Psword");
+
+    var u1 = u;
+
+    var p1 = md5(p);
+
+    var gg = 'no';
+
+    if(u1==""){
+        alert("Username cannot be empty!");
+        return;
+    }
+    // Franky! everytime get your local bc hash address to log in
+
+    var hashAddress = md5(App.account)
+
+    $.post("http://ec2-54-153-134-126.ap-southeast-2.compute.amazonaws.com/reg?usr="+u1+"&pwd="+p1+"&hsad="+hashAddress,
+
+    function(data){
+
+        if(data!=='no'){
+            if(App.activate==false){
+                App.init_account(data);
+            }
+            alert("Hi, "+data+" ! You have register success!");
+            WF_currentSectionFocus("Searching_Items");
+
+        }
+
+        else{
+
+            alert("Reg Failed! This user name already exits!");
+
+        }
+
+    });
+
+}
+
+
+
+function SE_check(win){
+
+    var u = HP_getDomValById("SE_UName");
+
+    var p = HP_getDomValById("SE_Psword");
+
+    var u1 = u;
+
+    var p1 = md5(p);
+
+    var gg = 'no';
+
+    var flag = true;
+
+    // Franky! everytime get your local bc hash address to log in
+    // console.log(App.account)
+
+    var hashAddress = md5(App.account)
+
+    $.post("http://ec2-54-153-134-126.ap-southeast-2.compute.amazonaws.com/?usr="+u1+"&pwd="+p1+"&hsad="+hashAddress,
+
+    function(data){
+
+        if(data!=='no'){
+
+            if(win){
+
+                alert("Hi, "+data+" ! You have login success!");
+
+                WF_currentSectionFocus("Searching_Items");
+
+            }
+
+            gg = data;
+
+        }
+
+        else{
+
+            if(win) alert("Login Failed! Please check your username and password!");
+
+            else {
+
+                alert("Hi, you ! Login before you wanna do something!");
+
+            }
+
+            gg = 'no';
+
+        }
+
+    });
+
+    return gg;
+
+}
+
+function SE_checkSteps(){
+
+    var k = SE_check(false);
+
+    // console.log("SE check "+k);
+
+    if(k=='no'){
+
+        return false;
+
+    }
+
+    return true;
+
+}
+
+
+
+HP_setDomAttrById("SE_BTN","onclick","SE_check(true)");
+
+HP_setDomAttrById("SE_REG","onclick","SE_reg()");
+
+function SE_TOP_UP(){
+    if(SE_checkSteps(false)){
+        var inputTxt = $("#top_up_amount").val();
+        // console.log(inputTxt)
+        if(inputTxt.value === " "){
+
+            alert("Cannot be empty!");
+
+            return;
+    }else{
+        App.top_up();
+    }
+}
+}
+function SE_WITHDRAW(){
+    if(SE_checkSteps(false)){
+        var inputTxt = $("#top_up_amount").val();
+
+            if(inputTxt.value === ""){
+
+            alert("Cannot be empty!");
+
+            return;
+            }else{
+                App.withdraw();
+            }
+    }
+        // App.withdraw();
+}
+// 此处所有的function按所属模块命名
+
+// ------------------------------------------
+
+// HP: Helper
+
+// SI: Selling Items
+
+// SC: Shopping Cart
+
+// II: Item Infomation
+
+// IM: Item Modification
+
+// SR: Searching Result 
+
+// TH: Transaction History
+
+// ------------------------------------------
+
+// ----------------HP------------------------
+
+// ------------------------------------------
+
+function HP_newElement(tag){
+
+    var newElement = document.createElement(tag);
+
+    return newElement;
+
+}
+
+function HP_getDomValById(domId){
+
+    var dom = document.getElementById(domId);
+
+    return dom.value;
+
+}
+
+function HP_setDomAttrArr(dom, attrNameArr, attrValArr, len){
+
+    var i = 0;
+
+    for(;i<len; i++){
+
+        dom.setAttribute(attrNameArr[i], attrValArr[i]);
+
+    }
+
+}
+
+function HP_setDomAttr(dom, attrName, attrVal){
+
+        dom.setAttribute(attrName, attrVal);
+
+}
+
+function HP_setDomAttrById(domId, attrName, attrVal){
+
+        var dom = document.getElementById(domId);
+
+        dom.setAttribute(attrName, attrVal);
+
+}
+
+function HP_getDomAttr(dom, attrName){
+
+        return dom.getAttribute(attrName);
+
+}
+
+function HP_getDomAttrById(domId, attrName){
+
+        var dom = document.getElementById(domId);
+
+        return dom.getAttribute(attrName);
+
+}
+
+function HP_setInnerHtmlById(domId, html){
+
+    var itemSec = document.getElementById(domId);
+
+    itemSec.innerHTML = html;
+
+}
+
+function HP_getInnerHtmlById(domId){
+
+    var itemSec = document.getElementById(domId);
+
+    return itemSec.innerHTML;
+
+}
+
+function HP_rmvDomAttr(dom, attrName){
+
+        dom.removeAttribute(attrName);
+
+}
+
+function HP_addDomToParentById(domChild, domParentId){HP_setDomAttrById
+
+    var paraElement = document.getElementById(domParentId);
+
+    paraElement.appendChild(domChild);
+
+}
+
+function HP_rmvDomById(domId){
+
+    var dom = document.getElementById(domId);
+
+    HP_rmvDom(dom);
+
+}
+
+function HP_rmvDom(dom){
+
+    domParent = dom.parentNode;
+
+    domParent.removeChild(dom);
+
+}
+
+function HP_cloneDomById(domId){
+
+    var itemSec = document.getElementById(domId);
+
+    // console.log(itemSec);
+
+    var newItem = itemSec.cloneNode(true);
+
+    return newItem;
+
+}
+
+function HP_cleanDomAllChild(domId, part, noWindow){
+
+    if(noWindow || confirm('Clean all your items in '+part+'?')){
+
+        var myNode = document.getElementById(domId);
+
+        while (myNode.firstChild) {
+
+            myNode.removeChild(myNode.firstChild);
+
+        }
+
+    }
+
+    else{
+
+        // console.log('canceled');
+
+    }
+
+}
+
+/////////////////////////////// modify by G
+
+function HP_arrGetInfoById(id){
+
+    // var itemInfoArr=App.Items_list;
+
+    // console.log(itemInfoArr);
+
+    for(var key in App.Items_list){
+
+        if(App.Items_list[key][0]===id)
+
+            return App.Items_list[key];
+
+    }
+
+    return null;
+
+}
+
+/////////////////////////////// modify by G
+
+function HP_arrGetSellInfoById(id){
+
+    // var sellItemInfoArr=App.Selling_items;
+
+    for(var key in App.Selling_items ){
+
+        if(App.Selling_items[key][0]===id)
+
+            return App.Selling_items[key];
+
+    }
+
+    return null;
+
+}
+
+// 数组坐标为不重复随机数[1, count]
+
+function HP_arrIdxRandomNoredun(count){
+
+    var originalArray=new Array;//原数组 
+
+    //给原数组originalArray赋值 
+
+    for (var i=0;i<count;i++){ 
+
+    originalArray[i]=i+1; 
+
+    } 
+
+    var d1=new Date().getTime(); 
+
+    originalArray.sort(function(){ return 0.5 - Math.random(); }); 
+
+    return originalArray;
+
+}
+
+function HP_getValInCookie(valName){
+
+    var strCookie=document.cookie; 
+
+    //将多cookie切割为多个名/值对 
+
+    var arrCookie=strCookie.split("; "); 
+
+    var val; 
+
+    //遍历cookie数组，处理每个cookie对 
+
+    for(var i=0;i<arrCookie.length;i++){ 
+
+            var arr=arrCookie[i].split("="); 
+
+            //找到名称为userId的cookie，并返回它的值 
+
+            if(valName==arr[0]){ 
+
+                    val=arr[1]; 
+
+                    return val; 
+
+            } 
+
+    } 
+
+    return null;
+
+}
+
+function HP_setValInCookie(valName, valVal){
+
+    var strCookie=document.cookie; 
+
+    document.cookie = "";
+
+}
+
+// ------junmp-------
+
+function HP_JumpProcSectionVisual(sectionId){
+
+    HP_rmvDomAttr(document.getElementById(sectionId), "hidden");
+
+}
+
+function HP_JumpProcSectionInvisual(sectionId){
+
+    HP_setDomAttrById(sectionId, "hidden","");
+
+}
+
+function HP_JumpProcScollVisual(btnId){
+
+    HP_rmvDomAttr(document.getElementById(btnId), "style");
+
+}
+
+function HP_JumpProcScollInvisual(btnId){
+
+    HP_setDomAttrById(btnId, "hidden","");
+
+}
+
+
+
+// ------------------------------------------
+
+// --------------- Work Flow ----------------
+
+// ------------------------------------------
+// zsc
+
+function WF_currentSectionFocus(sectionId){
+
+    // console.log("login 1 "+sectionId);
+
+    if(sectionId !== "loginpage" && sectionId !== "Item_Information" &&  sectionId !== "Searching_Items" && !SE_checkSteps(false)){
+        WF_currentSectionFocus("loginpage");
+
+        HP_JumpProcSectionInvisual("UM_TU_WD");
+        return;
+
+    }
+
+    // console.log("login 2 " + sectionId);
+
+    HP_JumpProcSectionVisual("UM_TU_WD");
+    var sectionNames = ["Item_Information","shoppingCart","Selling_item","Searching_Items","ModifyItems","portfolio", "loginpage"];
+
+    for(var i=0; i<sectionNames.length; i++){
+
+        if(sectionNames[i] == sectionId)
+
+            HP_JumpProcSectionVisual(sectionId);
+
+        else{
+
+            HP_JumpProcSectionInvisual(sectionNames[i]);
+
+            // console.log(sectionNames[i]);
+
+        }
+
+    }
+
+    if(sectionId=="shoppingCart" && document.getElementById("SC_List").children.length==0){
+
+        // console.log("ggg");
+
+        SC_loadCache();
+
+    }
+
+}
+
+function WF_sellingSection(){
+
+    SI_init();
+
+    WF_currentSectionFocus("Selling_item");
+
+}
+
+function WF_transactionSection(){
+
+    TH_init();
+
+    WF_currentSectionFocus("portfolio");
+
+}
+
+
+HP_setDomAttrById("IM_CancelBtn","onclick","WF_currentSectionFocus(\""+"Selling_item"+"\")");
+
+
+
+HP_setDomAttrById("TC_SR","onclick","WF_currentSectionFocus(\""+"Searching_Items"+"\")");
+
+HP_setDomAttrById("TC_SC","onclick","WF_currentSectionFocus(\""+"shoppingCart"+"\")");
+
+
+
+
+
+// ------------------------------------------
+
+// --------------- Cache --------------------
+
+// ------------------------------------------
+
+function CC_saveCookie(name, val){
+
+    // console.log("cookie ======1======== "+document.cookie);
+
+    if(document.cookie.split(";").length>0)
+
+        document.cookie = document.cookie + ";"
+
+    else document.cookie = "";
+
+    document.cookie = name + "=" +val;
+
+    // console.log("cookie ======2======== "+document.cookie);
+
+}
+
+
+
+function CC_getCookie(name){
+
+    var ck = document.cookie;
+
+    var ar = ck.split(";");
+
+    for(var i=0; i<ar.length; i++)
+
+        if(ar[i].split("=")[0] == name)
+
+            return ar[i].split("=")[1];
+
+    return "";
+
+}
+
+
+
+
+
+// https://firebasestorage.googleapis.com/v0/b/comp9900-13cd5.appspot.com/o/images%2Fcoffe.jpg?alt=media&token=613b80ae-9fd5-4582-a55b-83feb873bbdf
+
+function CC_getImgStr(str){
+
+    var imgres = str.split("images%2F");
+
+    var imgdata = imgres[1].split("?");
+
+    var imageName = imgdata[0];
+
+    var token = imgdata[1].split("token=")[1];
+
+    return imageName+"__"+token;
+
+}
+
+function CC_saveImgURL(str){
+
+    // console.log("Fuck this img: -- "+str);
+
+    var imageName = str.split("__")[0];
+
+    var token = str.split("__")[1];
+
+    return "https://firebasestorage.googleapis.com/v0/b/comp9900-13cd5.appspot.com/o/images%2F"+imageName+"?alt=media&token="+token;
+
+}
+
+// ------------------------------------------
+
+// --------------- Upload--------------------
+
+// ------------------------------------------
+
+
+
+function redirBtn(){
+
+    document.querySelector('#uploadFileInput').click();
+
+}
+
+HP_setDomAttrById("IM_ImageBtn","onclick","redirBtn()");
+
+
+
+var config = {
+
+    apiKey: "AIzaSyC-giHs7IRTTvHYDrjisukXD0yhjJyiZE0",
+
+    authDomain: "comp9900-13cd5.firebaseapp.com",
+
+    databaseURL: "https://comp9900-13cd5.firebaseio.com",
+
+    projectId: "comp9900-13cd5",
+
+    storageBucket: "comp9900-13cd5.appspot.com",
+
+    messagingSenderId: "77049547082"
+
+};
+
+firebase.initializeApp(config);
+
+var storageRef = firebase.storage().ref();
+
+
+
+var uploadedNewImg = "";
+
+var uploadFileInput = document.getElementById("uploadFileInput");
+
+// console.log("Andrew: -- "+document.getElementById("uploadFileInput").files);
+
+uploadFileInput.addEventListener("change", function(){
+
+	var file = this.files[0];
+
+
+  var uploadTask = storageRef.child('images/'+file.name).put(file);
+
+  uploadTask.on('state_changed', function(snapshot){
+
+    // Observe state change events such as progress, pause, and resume
+
+    // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+
+    var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+
+    // console.log('Upload is ' + progress + '% done');
+
+    switch (snapshot.state) {
+
+      case firebase.storage.TaskState.PAUSED: // or 'paused'
+
+        alert("Upload is paused, please try again");
+
+        break;
+
+      case firebase.storage.TaskState.RUNNING: // or 'running'
+
+        break;
+
+    }
+
+  }, function(error) {
+
+    // Handle unsuccessful uploads
+
+        alert("Something wrong, please try again");
+
+  }, function() {
+
+    // Handle successful uploads on complete
+
+    // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+
+    var downloadURL = uploadTask.snapshot.downloadURL;
+
+    uploadedNewImg = downloadURL;
+
+    alert("Uploading Successfully!");
+
+    HP_setDomAttrById("IM_CurrentImg","src",uploadedNewImg);
+
+    // console.log(downloadURL);
+
+  });
+
+  // console.log(uploadTask.snapshot.downloadURL);
+
+},false);
+
+
+
+
+
+
+
+
+
+// ------------------------------------------
+
+// ---------------Shopping Cart--------------
+
+// ------------------------------------------
+
+var scCookieName = "scCache";
+// zsc
+function SC_cleanSC(){
+    var currUserAddress = App.account;
+    var SC_List = document.getElementById("SC_List");
+    for(var i=0; i<SC_List.children.length; i++){
+        cn = SC_List.children[i];
+        domId = HP_getDomAttr(cn, "id");
+        SC_deleteItem(domId);
+
+    }
+}
+
+// zsc
+function SC_saveCache(itemId, qty){
+
+    var currCookie = CC_getCookie(scCookieName);
+
+    // console.log("get Cookie as "+currCookie)
+
+    // zsc
+    var currentUserAddress = App.account;
+    currCookie = currCookie + "#" + itemId + "__" + qty + "__" + currentUserAddress;
+
+    CC_saveCookie(scCookieName, currCookie);
+
+}
+
+
+
+function SC_deleteCache(itemId){
+
+    var currCookie = CC_getCookie(scCookieName);
+
+    if(currCookie == "")
+
+        return;
+
+    var result = "";
+
+    var idArr = currCookie.split("#");
+
+    // zsc
+    var currentUserAddress = App.account;
+    for(var i=1; i<idArr.length; i++){
+
+        if(itemId==idArr[i].split("__")[0] && currentUserAddress==idArr[i].split("__")[2])
+
+            continue;
+
+        result = result + "#" + idArr[i]
+
+    }
+
+    // console.log(result);
+
+    if(result!==""){
+
+        // console.log("cookie 01");
+
+        CC_saveCookie(scCookieName, result);
+
+    }
+
+    else{
+
+        // console.log("cookie 02");
+
+        var date = new Date();
+
+        date.setTime(date.getTime()+(-1*24*60*60*1000));
+
+        document.cookie = document.cookie + ";expires="+date.toGMTString();
+
+    }
+
+}
+
+function SC_loadCache(){
+
+    var currCookie = CC_getCookie(scCookieName);
+
+    if(currCookie == "")
+
+        return;
+
+    var idArr = currCookie.split("#");
+
+    // console.log(idArr);
+
+    for(var i=1; i<idArr.length; i++){
+
+        var itemInfo = HP_arrGetInfoById(idArr[i].split("__")[0]);
+
+        // console.log(itemInfo);
+
+        // zsc id img name qty price
+        var currUserAddress = App.account;
+        if(currUserAddress == idArr[i].split("__")[2])
+            SC_addCartItem(itemInfo[0],CC_saveImgURL(itemInfo[5]),itemInfo[1],idArr[i].split("__")[1],itemInfo[2]);
+
+    }
+
+}
+
+
+
+function SC_addQuatity(inputId){
+
+    var newVal = parseInt($("#"+inputId+"").val())+1;
+
+    if(newVal<=0){
+
+        newVal = 1;
+
+    }
+
+    $("#"+inputId+"").val(newVal);
+
+}
+
+
+
+function SC_subQuatity(inputId){
+
+    var newVal = parseInt($("#"+inputId+"").val());
+
+    if(newVal >= 2){newVal = newVal-1;}
+
+    $("#"+inputId+"").val(newVal);
+
+}
+
+
+
+function SC_deleteItem(inputId){
+
+    if(confirm('You wanna delete this item in your shopping cart?')){
+
+        HP_rmvDomById(inputId);
+
+        // console.log(inputId);
+
+        SC_deleteCache(inputId);
+
+    }
+
+    else{
+
+        // console.log('canceled');
+
+    }
+
+}
+
+
+
+// 调用这个函数，向购物车中增加item
+
+function SC_addCartItem(id, img, name, quatity, price){
+
+    var newItem = HP_cloneDomById("SC_Sample");
+
+    HP_rmvDomAttr(newItem, "hidden");
+
+    var cN = newItem.children[0].children[1];
+
+    HP_setDomAttr(newItem.children[0].children[0], "src", img);
+
+    
+
+    var sclist = document.getElementById("SC_List");
+
+    for(var i=0; i<sclist.children.length; i++)
+
+        if(sclist.children[i].id == id){
+
+            var curr = sclist.children[i].children[0].children[1].children[1];
+
+            var newV = parseInt(curr.value) + parseInt(quatity)
+
+            HP_setDomAttr(curr,"value", newV+"");
+
+            return;
+
+        }
+
+    HP_setDomAttr(newItem, "id", id);
+
+    cN.innerHTML = cN.innerHTML.replace("Item2", name);
+
+    HP_setDomAttr(cN.children[1], "value", quatity);
+
+    HP_setDomAttr(cN.children[1], "id", id+"input");
+
+    HP_setDomAttr(cN.children[0], "onclick", "SC_subQuatity(\""+id+"input\""+")");
+
+    HP_setDomAttr(cN.children[2], "onclick", "SC_addQuatity(\""+id+"input\""+")");
+
+    HP_setDomAttr(cN.children[3], "onclick", "SC_deleteItem(\""+id+"\""+")");
+
+    HP_setDomAttr(cN.children[5], "onclick", "SC_goPay(\""+id+"\""+")");
+
+    
+
+    HP_addDomToParentById(newItem, "SC_List");
+
+}
+
+/////////////////////////////// modify by G
+
+// 此处应该是打开 meta fox 付款的接口位置
+function get_time(flag){
+    var today = new Date();
+
+    var dd = today.getDate();
+
+    var mm = today.getMonth()+1; //January is 0!
+
+    var yyyy = today.getFullYear();
+
+    var hour = today.getHours();
+
+    var Minute =today.getMinutes();
+
+    if(dd<10) {
+
+        dd = '0'+dd;
+
+    } 
+
+    if(mm<10) {
+
+        mm = '0'+mm;
+
+    } 
+
+    if(hour<10){
+
+        hour='0'+hour;
+
+    }
+
+    if(Minute<10){
+
+        Minute='0'+Minute;
+
+    }
+
+    if(flag==1){
+        date =  hour.toString() +Minute.toString() +mm.toString() +  dd.toString()  + yyyy.toString();
+        return date;
+    }else{
+        date =  hour.toString() +":"+Minute.toString() +" "+mm.toString() + "/"+ dd.toString()  +"/"+ yyyy.toString();
+    return date
+    }
+}
+
+function SC_goPay(itemId){
+
+    if(confirm('You wanna pay this item with meta fox?')){
+
+        var id = itemId;
+
+        var quantity = document.getElementById(itemId).children[0].children[1].children[1].value;
+
+        date =  get_time(1);
+
+        // console.log(date);
+
+        // 这里调用meta fox 支付
+
+        // App.Buy_item(id,quantity,date);
+
+        // 存放支付结果
+
+        var result =  App.Buy_item(id,quantity,date);
+        // console.log(result);
+
+        // 支付结果判定
+
+        // 成功，删除购物车，伪同步transaction
+
+        if(result){
+
+            HP_rmvDomById(itemId);
+
+            SC_deleteCache(itemId);
+
+            //(name, price, amount, people, date, sellOrBuy)
+
+            var info = HP_arrGetInfoById(itemId);
+
+            // TH_addTransactionRecord(info[1], info[2], quantity, info[6], date, true,-1,1);
+
+        }
+
+        else{
+
+            alert("Payment failed, please try again!");
+            $("#loader").hide();
+            $("#content").show();
+            WF_currentSectionFocus("shoppingCart");
+        }
+    }
+
+    else{
+
+        // console.log('canceled');
+
+    }
+
+}
+
+
+
+// var itemBC = Array();
+
+// itemBC[0] = new Array();
+
+
+
+
+
+//where is goPay
+
+HP_setDomAttrById("SC_Close", "onclick", "WF_currentSectionFocus(\"Searching_Items\")");
+
+// zsc
+HP_setDomAttrById("SC_Clean", "onclick", "SC_cleanSC()");
+
+
+
+//test case
+
+// SC_addCartItem(9999, "test3", 15, 13);
+
+// ------------------------------------------
+
+// ---------------Item Information-----------
+
+// ------------------------------------------
+
+var II_id = 0;
+
+function II_setItemInfo(id, name, price, amount, seller, description, img){
+
+    II_id = id;
+    check_comment_right();
+    get_comments();
+    HP_setInnerHtmlById("II_Name", name);
+
+    HP_setInnerHtmlById("II_Price", "Price:"+price);
+
+    HP_setInnerHtmlById("II_Amount", "Amount:"+amount);
+
+    HP_setInnerHtmlById("II_Seller", "Seller:"+seller);
+
+    HP_setInnerHtmlById("II_Description", description);
+
+    HP_setDomAttrById("II_Img","src",img);
+
+    WF_currentSectionFocus("Item_Information");
+
+}
+
+
+
+function II_addToShoppingCart(){
+
+    var name = HP_getInnerHtmlById("II_Name");
+
+    var price = HP_getInnerHtmlById("II_Price").split(":")[1];
+
+    var quatity = HP_getDomValById("II_Input");
+
+    var imgSrc = HP_getDomAttrById("II_Img","src");
+
+    SC_addCartItem(II_id, imgSrc, name, quatity, price);
+
+    SC_saveCache(II_id, quatity);
+
+    WF_currentSectionFocus("shoppingCart");
+
+}
+
+// initial events
+
+HP_setDomAttrById("II_Sub", "onclick", "SC_subQuatity(\"II_Input\")");
+
+HP_setDomAttrById("II_Add", "onclick", "SC_addQuatity(\"II_Input\")");
+
+HP_setDomAttrById("II_AddSC", "onclick", "II_addToShoppingCart()");
+
+
+
+// ------------------------------------------
+
+// -----------Searching Result---------------
+
+// ------------------------------------------
+
+function SR_clearSR(){
+
+    HP_cleanDomAllChild("SR_List", "Searching Result", true);
+    
+
+}
+
+/////////////////////////////// modify by G
+
+function itemFilter(itemArr, filterStr){
+
+        var resultArr = new Array();
+
+        var idx = 0;
+
+        var i = 0;
+
+        // console.log(itemArr);
+
+        for (i=0; i<itemArr.length; i++){
+
+            // console.log(itemArr[i][0],itemArr[i][0].toLowerCase().indexOf(filterStr.toLowerCase()));
+
+            if (itemArr[i][1].toLowerCase().indexOf(filterStr.toLowerCase()) !== -1 && itemArr[i][6]!=App.nickname){
+
+                resultArr[idx] = itemArr[i];
+
+                idx++;
+
+            }
+
+        }
+
+        return resultArr;
+
+    }
+
+function SR_addItems(id, name, img){
+
+    var newItem = HP_cloneDomById("SR_Sample");
+
+    HP_rmvDomAttr(newItem, "hidden");
+
+    HP_setDomAttr(newItem, "id", id);
+
+    HP_setDomAttr(newItem.children[0].children[0],"src",img);
+
+    // 点击图片来更改 Item Infomation 里的东西
+
+    var itemInfo = HP_arrGetInfoById(id);
+
+    // console.log(itemInfo);
+
+    var setIIPara = "\"" + id + "\",";
+
+    setIIPara = setIIPara + "\"" + itemInfo[1] + "\",";
+
+    setIIPara = setIIPara + "\"" + itemInfo[2] + "\",";
+
+    setIIPara = setIIPara + "\"" + itemInfo[3] + "\",";
+
+    setIIPara = setIIPara + "\"" + itemInfo[6] + "\",";
+
+    setIIPara = setIIPara + "\"" + itemInfo[4] + "\",";
+
+    setIIPara = setIIPara + "\"" + CC_saveImgURL(itemInfo[5]) + "\"";
+
+    HP_setDomAttr(newItem.children[0].children[0],"onclick","II_setItemInfo(" + setIIPara + ")");
+
+    newItem.children[0].children[1].innerHTML = name;
+
+    HP_addDomToParentById(newItem, "SR_List");
+
+}
+
+/////////////////////////////// modify by G
+
+function SR_searchAdd(){
+
+        // Complete web3.js here.
+
+        // "id","Name","Amount","Price","Seller","Description","img Name"
+
+        SR_clearSR();
+
+        // var temp_items = App.Items_list;
+        var items = new Array();
+
+        for (var key in App.Items_list) {
+            // array_keys.push(key);
+            items.push(App.Items_list[key]);
+        }
+
+        // console.log(App.Items_list);
+
+        // items[5] = new Array(17,"Next Episode","13","92929292","Joey","JB BIG","coffe.jpg");
+
+        
+
+　　　　var inputTxt = HP_getDomValById("SR_Input");
+
+
+
+        // if inputTxt is empty, return random first MaxItemAmount items.
+
+        // otherwise, filter our array to get items which name contains key words.
+
+        if(inputTxt.value === ""){
+
+            alert("Please input key words before searching!");
+
+            return;
+
+        }else{
+
+            var result = itemFilter(items,inputTxt);
+
+            items=result;
+
+        }
+
+        
+
+        var currentItemIdx = 0;
+
+        while(items!==null && currentItemIdx < items.length){
+
+                if(parseInt(items[currentItemIdx][3])>0 && items[currentItemIdx][6]!=App.nickname)
+
+                    SR_addItems(items[currentItemIdx][0], items[currentItemIdx][1], CC_saveImgURL(items[currentItemIdx][5]));
+
+                currentItemIdx ++;
+
+        }
+
+    }
+
+// initial
+
+HP_setDomAttrById("SR_SearchBtn","onclick", "SR_searchAdd()");
+
+
+
+/////////////////////////////// modify by G
+
+// HP_setDomAttrById("SR_WatchBtn","onclick", "SR_RandomShow()");
+
+// random show
+
+// function SR_RandomShow(){
+
+//     SR_clearSR();
+
+//     var maxRandomShow = 2;
+
+//     var itemInfoArr=App.Items_list;
+
+//     // console.log(itemInfoArr);
+
+//     if(itemInfoArr.length <= maxRandomShow)
+
+//         for(var i=0; i<itemInfoArr.length; i++)
+
+//             if(parseInt(itemInfoArr[i][3])>0)
+
+//                 SR_addItems(itemInfoArr[i][0], itemInfoArr[i][1],   CC_saveImgURL(itemInfoArr[i][5]));
+
+//     else{
+
+//         var randomIdxArr = HP_arrIdxRandomNoredun(itemInfoArr.length);
+
+//         for(var i=0; i<maxRandomShow; i++)
+
+//             if(parseInt(itemInfoArr[randomIdxArr[i]-1][3])>0)
+
+//                 SR_addItems(itemInfoArr[randomIdxArr[i]-1][0], itemInfoArr[randomIdxArr[i]-1][1], CC_saveImgURL(itemInfoArr[randomIdxArr[i]-1][5]));
+
+//     }
+
+// }
+
+
+
+// ------------------------------------------
+
+// -----------Selling Items------------------
+
+// ------------------------------------------
+
+function SI_clearSI(){
+
+    HP_cleanDomAllChild("SI_List", "Selling Items", true);
+
+}
+// zsc
+function SI_AddItems(id, name, img, price, amount){
+
+    // console.log("SI_ADDITEMS___"+price+"_"+amount);
+
+    var newItem = HP_cloneDomById("SI_Sample");
+
+    HP_rmvDomAttr(newItem, "hidden");
+
+    HP_setDomAttr(newItem, "id", "SI_"+id);
+
+    var tagItem = newItem.children[0]
+
+    HP_setDomAttr(tagItem.children[0],"src",img);
+
+    tagItem.children[1].innerHTML = tagItem.children[1].innerHTML.replace("Item2", name+" ( p: $"+price+" ; a: "+amount+" )");
+
+    HP_setDomAttr(tagItem.children[1].children[0], "onclick", "SI_deleteItem(\"SI_"+id+"\",true)");
+
+    HP_setDomAttr(tagItem.children[1].children[1], "onclick", "SI_modifyItem(\"SI_"+id+"\")");
+
+    HP_addDomToParentById(newItem, "SI_List");
+
+}
+
+function SI_deleteItem(domId , bol){
+
+    if(bol && confirm('You wanna delete this item in your selling cart?')){
+
+        HP_rmvDomById(domId);
+
+        var actualId = domId.split("_")[1];
+
+        App.Delete_item(actualId);
+
+    }
+
+    else{
+
+        // console.log('canceled');
+
+    }
+
+}
+
+
+
+function SI_modifyItem(domId){
+
+    //这里打开和填充modify界面
+
+    var actualId = domId.split("_")[1];
+
+    // console.log("set si item id as : " + actualId);
+
+    IM_newOrModification(false);
+
+    IM_inputItemInfoById(actualId);
+
+    WF_currentSectionFocus("ModifyItems");
+
+}
+/////////////////////////////// modify by G
+
+// initial
+
+function SI_init(){
+
+    SI_clearSI();
+
+    // App.render();
+
+    // var sellItemInfoArr=App.Selling_items;
+
+    // console.log(sellItemInfoArr);
+
+    // console.log("____GET__SI INIT___");
+    for(var key in App.Selling_items)
+
+        // if(parseInt(sellItemInfoArr[i][3])>0)
+
+        // zsc
+            
+            SI_AddItems(App.Selling_items[key][0], App.Selling_items[key][1], CC_saveImgURL(App.Selling_items[key][5]),  App.Selling_items[key][2],  App.Selling_items[key][3]);
+
+}
+
+
+
+function SI_shellNewItems(){
+
+    IM_newOrModification(true);
+
+            // zsc
+            HP_setDomAttrById("IM_CurrentImg","src","https://firebasestorage.googleapis.com/v0/b/comp9900-13cd5.appspot.com/o/images%2FGOT1.jpg?alt=media&token=cf1f52cd-dfed-4f5c-8eed-6f901cb8af54");
+            HP_setDomAttrById("IM_Name","value","");
+            HP_setDomAttrById("IM_Amount","value","");
+            HP_setDomAttrById("IM_Price","value","");
+            HP_setDomAttrById("IM_Description","value","");
+            HP_setInnerHtmlById("IM_Description","");
+    WF_currentSectionFocus("ModifyItems");
+
+}
+
+// ------------------------------------------
+
+// ---------------Item Modification----------
+
+// ------------------------------------------
+
+var modifycationId = 0;
+
+function IM_newOrModification(mode){
+
+    // new
+
+    // console.log(mode);
+
+    if(mode){
+
+        HP_setInnerHtmlById("IM_Header", "Shelf a new product");
+
+        HP_setInnerHtmlById("IM_SaveBtn","Add");
+
+        HP_setDomAttrById("IM_SaveBtn", "onclick", "IM_saveModification(true)");
+
+    }
+
+    else{
+
+        HP_setInnerHtmlById("IM_Header", "Modify your item");
+
+        HP_setInnerHtmlById("IM_SaveBtn","Save");
+
+        HP_setDomAttrById("IM_SaveBtn", "onclick", "IM_saveModification(false)");
+
+    }
+
+}
+
+/////////////////////////////// modify by G
+
+IM_newOrModification(true);
+
+
+
+// 这里用 web3js 通过id 得到 item info
+
+function IM_inputItemInfoById(itemId){
+
+    modifycationId = itemId;
+
+    // fetch info by id here
+
+    var IM_ItemInfoArr = HP_arrGetSellInfoById(itemId);
+
+    var name = IM_ItemInfoArr[1];
+
+    var img = CC_saveImgURL(IM_ItemInfoArr[5]);
+
+    var amount = IM_ItemInfoArr[3];
+
+    var price = IM_ItemInfoArr[2];
+
+    var des = IM_ItemInfoArr[4];
+
+    IM_inputItemInfo(name,img,amount,price,des);
+
+}
+
+
+
+function IM_inputItemInfo(name, img, quantity, price, description){
+
+    HP_setDomAttrById("IM_CurrentImg", "src", img);
+
+    HP_setDomAttrById("IM_Name", "value", name);
+
+    HP_setDomAttrById("IM_Amount", "value", quantity);
+
+    HP_setDomAttrById("IM_Price", "value", price);
+
+    HP_setInnerHtmlById("IM_Description",  description);
+    HP_setDomAttrById("IM_Description", "value",  description);
+
+}
+
+
+
+function IM_saveModification(newOrModify){
+
+    // 这里需要得到之前modification进来时候用的id
+
+    // Frank
+
+    // console.log("aa");
+
+    var id = modifycationId;
+
+    var imgSrc = CC_getImgStr( HP_getDomAttrById("IM_CurrentImg", "src"));
+
+    var newName = HP_getDomValById("IM_Name");
+
+    var newAmount = HP_getDomValById("IM_Amount");
+
+    var newPrice = HP_getDomValById("IM_Price");
+
+    var newDescription = HP_getDomValById("IM_Description");
+
+    // console.log("_SELLING_"+newPrice+"_"+newAmount);
+    /////////////////////////////// modify by G
+
+    if(confirm('You wanna save this item?')){
+
+        // 更新进solidity
+
+        // 新item 不用id
+
+        if(newOrModify){
+
+            // console.log("add new item",newDescription);
+
+            App.Sell_Item(newName,newAmount,newPrice,newDescription,imgSrc);
+            //zsc
+            SI_AddItems(id, newName, HP_getDomAttrById("IM_CurrentImg", "src"), newPrice, newAmount);
+
+        }
+
+        // 老item 使用id
+
+        else{
+
+            App.Modify_item(id,newName,newAmount,newPrice,newDescription,imgSrc);
+
+            SI_deleteItem("SI_"+id, false);
+            // zsc
+            SI_AddItems(id, newName, HP_getDomAttrById("IM_CurrentImg", "src"), newPrice, newAmount);
+
+            // console.log("save old item   >>>  " + imgSrc);
+
+        }
+
+    }
+
+    else{
+
+        // console.log('canceled');
+
+    }
+
+}
+
+
+
+// ------------------------------------------
+
+// ----------------TH------------------------
+
+// ------------------------------------------
+
+
+
+// class="mix all buying col-md-4 col-sm-6"
+
+function TH_addTransactionRecord(name, price, amount, people, date, sellOrBuy,trade_id,trade_status){
+
+    var newItem = HP_newElement("figure");
+
+    HP_setDomAttr(newItem, "style","display:inline-block;");
+
+    for(var i=0; i<7; i++)
+
+        newItem.appendChild(HP_newElement("h4"));
+
+    newItem.children[0].innerHTML = "Name:"+name;
+
+    newItem.children[1].innerHTML = "Price:"+price;
+
+    newItem.children[2].innerHTML = "Amount:"+amount;
+
+    var p = "Buyer:";
+
+    HP_setDomAttr(newItem, "class", "mix all selling col-md-4 col-sm-6");
+
+    if(sellOrBuy==1){
+
+        p = "Seller:";
+
+        HP_setDomAttr(newItem, "class", "mix all buying col-md-4 col-sm-6");
+
+    }
+
+    newItem.children[3].innerHTML = p+people;
+
+    newItem.children[4].innerHTML = "Date:"+date;
+    // if(trade_id==-1){
+    //     newItem.children[5].innerHTML = "Trade id:"+"##"+App.fake_trade_id+1;
+    // }else{
+        newItem.children[5].innerHTML = "Trade id:"+"##"+trade_id;
+    // }
+    if(trade_status==1){
+        newItem.children[6].innerHTML = "Status:"+"On process";
+    }
+    if(trade_status==2){
+        newItem.children[6].innerHTML = "Status:"+"Finished";
+    }
+    if(trade_status==3){
+        newItem.children[6].innerHTML = "Status:"+"Cancelled";
+    }
+    if(sellOrBuy==1 && trade_status==1){
+    // zsc
+    //type="submit" class="btn btn-primary"
+    var confirm_button = document.createElement("button");
+    var refund_button = document.createElement("button");
+    confirm_button.setAttribute("class","btn btn-primary");
+    confirm_button.setAttribute("type","submit");
+    refund_button.setAttribute("class","btn btn-primary");
+    refund_button.setAttribute("type","submit");
+    refund_button.setAttribute("style","margin-left:15px;");
+    // confirm_button.setAttribute("onclick","App.comfirm(trade_id)");
+    // refund_button.setAttribute("onclick","App.comfirm(trade_id)");
+    confirm_button.addEventListener("click", function(event) {App.comfirm(trade_id);event.preventDefault();});
+    refund_button.addEventListener("click", function(event) {App.refund(trade_id);event.preventDefault();});
+    confirm_button.innerHTML="Confirm trade";
+    refund_button.innerHTML="Cancel trade";
+    newItem.appendChild(confirm_button);
+    newItem.appendChild(refund_button);
+    }
+    HP_addDomToParentById(newItem, "TH_List");
+
+}
+// <button class="btn btn-primary" onclick="add_comment()" id ="add_comment_btn">Submit<i class="ps-icon-next"></i></button>
+function TH_clear(){
+
+    HP_cleanDomAllChild("TH_List", "Transaction History", true);
+
+}
+
+/////////////////////////////// modify by G
+
+function TH_init(){
+
+    // App.Get_trade_history();
+
+    TH_clear();
+
+    // console.log(App.Trade_history);
+
+    for(var key in App.Trade_history){
+
+        var temp =App.Trade_history[key];
+
+        // time,id,name,value,amount,trader,trader_type
+
+        TH_addTransactionRecord(temp[2],temp[3],temp[4],temp[5],temp[0],temp[6],temp[7],temp[8]);
+
+    }
+
+}
+// TH_addTransactionRecord("JoeyItem1", "112.00", "115", "Franky1", "2018-5-1 18:00", true);
+// TH_addTransactionRecord("JoeyItem2", "912.00", "195", "Franky2", "2028-5-1 13:00", false);
+
+////////Comment////////////////////////////
+var db =  firebase.firestore();
+// console.log(db)
+function add_comment() {
+    var customer_rate = parseInt($("input[name='rating']:checked").val());
+    // console.log(customer_rate);
+    var customer_review = document.getElementById("customer_review").value;
+    var customer_name = App.nickname;
+    var item_id = II_id;
+    var current_time = get_time(2);
+    var temp_data = {};
+    var data ={
+        name: customer_name,
+        review: customer_review,
+        rating: customer_rate,
+        time:current_time
+    }
+
+    var rate_Ref = db.collection("Item avg rates").doc(item_id);
+    rate_Ref.get().then(function (doc) {
+        if(doc.exists){
+            var data = doc.data();
+            var temp_num = parseInt(data['number'])+1;
+            var temp_avgrat = (parseInt(data['avg_rate'])*parseInt(data['number'])+parseInt(customer_rate))/parseInt(temp_num);
+            rate_Ref.update({number:temp_num,avg_rate:temp_avgrat});
+
+        }else{
+            rate_Ref.set({number:1,avg_rating:customer_rate});
+        }
+    });
+    var rews_Ref = db.collection(item_id).doc(customer_name);
+
+    rews_Ref.get().then(function(doc) {
+        if (doc.exists) {
+            rews_Ref.update(data);
+            // console.log("Document data:", doc.data());
+        } else {
+            // console.log("No such document!");
+            rews_Ref.set(data);
+        }
+    }).catch(function(error) {
+        // console.log("Error getting document:", error);
+    });
+
+    var t_reviews = document.getElementById("reviews");
+    var p_review = document.createElement("div");
+    t_reviews.appendChild(p_review);
+    var new_review =  build_comment(customer_name,customer_review,customer_rate,current_time);
+    t_reviews.appendChild(new_review);
+    var btn = document.getElementById("add_comment_btn");
+    btn.innerHTML = "Thanks for your comment";
+    btn.setAttribute("disabled","disabled");
+    $("#comments").show();
+}
+function build_comment(name,review,rating,time) {
+    var review_content = document.createElement("div");
+    review_content.setAttribute("class","reviews_content");
+    var rate = document.createElement("div");
+    rate.setAttribute("class","star-rating-checked");
+    var fieldset = document.createElement("fieldset")
+    for(var i = 5;i>0;i--){
+        var input = document.createElement("input");
+        var label = document.createElement("label");
+        input.setAttribute("type","radio");
+        input.setAttribute("value",i);
+        if(i === rating){
+            input.setAttribute("checked","true");
+        }
+        fieldset.appendChild(input);
+        fieldset.appendChild(label);
+    }
+    var new_p = document.createElement("p");
+    var strong_name = document.createElement("strong");
+    strong_name.innerHTML=name;
+    new_p.innerHTML = "By ";
+    new_p.appendChild(strong_name);
+    new_p.innerHTML= new_p.innerHTML + " - "+ time;
+    var new_p2 = document.createElement("p");
+    new_p2.innerHTML = review;
+    rate.appendChild(fieldset);
+    // console.log(fieldset,rate)
+    review_content.appendChild(rate);
+    review_content.appendChild(new_p);
+    review_content.appendChild(new_p2);
+    return review_content;
+}
+function get_comments() {
+    // console.log("aaa");
+    HP_cleanDomAllChild("reviews", "Comments", true);
+    var item_id = II_id;
+    var docsRef = db.collection(item_id);
+    docsRef.get().then(function(querySnapshot) {
+        // console.log(querySnapshot)
+        if(querySnapshot.docs.length!=0){
+            $("#comments").show();
+            querySnapshot.forEach(function(doc) {
+                // doc.data() is never undefined for query doc snapshots
+                // console.log(doc.data());
+                var name = doc.data()["name"];
+                var rate = doc.data()["rating"];
+                var review = doc.data()["review"];
+                var time = doc.data()["time"];
+                var t_reviews = document.getElementById("reviews");
+                var p_review = document.createElement("div");
+                t_reviews.appendChild(p_review);
+                var new_review =  build_comment(name,review,rate,time);
+                t_reviews.appendChild(new_review);
+            });
+        }
+        else{
+            $("#comments").hide();
+        }
+        });
+    }
+function check_comment_right(){
+    $("#write_comment").hide();
+    var user = App.account;
+    var trade_history = App.Trade_history;
+    for(var key in trade_history){
+        if(trade_history[key][1]==II_id && trade_history[key][6]==1 &&trade_history[key][8]==2){
+            $("#write_comment").show();
+            break;
+        }
+    }
+
+}
+</script>
+
+
+
+<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/smooth-scroll.js"></script>
+
+<script src="js/custom.js"></script>
+
+<script src="js/web3.min.js"></script>
+
+<script src="js/truffle-contract.js"></script>
+
+
+
+</body>
+
+</html>

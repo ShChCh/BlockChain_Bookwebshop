@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+    <meta name="Description" content="." />
+    <meta name="keywords" content="" />
+
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+</head>
+<body>
+    <section class="page-cover home-cover">
+        <div class="container">
+            <h1>Blockchain Shopping Center</h1>
+            <h3>Anonymous trading platform</h3>
+        </div>
+        <div class="banner-form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <form>
+                            <div class="form-group">
+                                <input id="sc_input" type="text" class="form-control autocomplete" placeholder="Key words or descriptions" />
+                                <button id="sc_button" type="button" class="btn btn-success" onclick="searchingAndAdd()" >Search items</button>
+                            </div> 
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-content">
+    <div class="container">
+        <div class="row">
+            <header class="panel products-filter clearfix">
+                <h2 class="pull-left  hidden-xs">Searching Result</h2>
+            </header>
+        <div id="searching_result">
+            <a class="routeToProduct1" id="sc_itm01" href="">
+                <div class="col-sm-3 smallermarginright">
+                    <form id="f_sc_itm01" method="post" action="">
+                    <input type="hidden" name="itm_id" value="itm01">
+                    <article class="product">
+                        <figure style="background:#057E65;padding-top:10px;">
+                            <img src="./img/2.jpg">
+                        </figure>
+                        <div class="product-info">
+                            <h2>Do</h2> 
+                            <p class="rating"></p>
+                            <p>Search</p>
+                        </div>
+                    </article>
+                    </form>
+                </div>
+            </a>
+            <a class="routeToProduct1" id="sc_itm02" href="">
+                <div class="col-sm-3 smallermarginright">
+                    <form id="f_sc_itm02" method="post" action="">
+                    <input type="hidden" name="itm_id" value="itm02">
+                    <article class="product">
+                        <figure style="background:#057E65;padding-top:10px;">
+                            <img src="./img/2.jpg">
+                        </figure>
+                        <div class="product-info">
+                            <h2>You</h2> 
+                            <p class="rating"></p>
+                            <p>like</p>
+                        </div>
+                    </article>
+                    </form>
+                </div>
+            </a>
+            <a class="routeToProduct1" id="sc_itm02" href="">
+                <div class="col-sm-3 smallermarginright">
+                    <form id="f_sc_itm02" method="post" action="">
+                    <input type="hidden" name="itm_id" value="itm02">
+                    <article class="product">
+                        <figure style="background:#057E65;padding-top:10px;">
+                            <img src="./img/2.jpg">
+                        </figure>
+                        <div class="product-info">
+                            <h2>Desire</h2> 
+                            <p class="rating"></p>
+                            <p>a</p>
+                        </div>
+                    </article>
+                    </form>
+                </div>
+            </a>
+            <a class="routeToProduct1" id="sc_itm02" href="">
+                <div class="col-sm-3 smallermarginright">
+                    <form id="f_sc_itm02" method="post" action="">
+                    <input type="hidden" name="itm_id" value="itm02">
+                    <article class="product">
+                        <figure style="background:#057E65;padding-top:10px;">
+                            <img src="./img/2.jpg">
+                        </figure>
+                        <div class="product-info">
+                            <h2>Power?!</h2> 
+                            <p class="rating"></p>
+                            <p>G.A.N.G.S.T.A!</p>
+                        </div>
+                    </article>
+                    </form>
+                </div>
+            </a>
+        </div>
+        </div>
+        </div>
+    </section>
+    <!-- <footer>
+        <img src="./img/3.jpg" style="height:300px; width:100%">
+    </footer>
+    -->
+<script>
+  function newItemElem(currItemId, name, amount, price, seller) {        
+        // existed parent DOM nodes.
+        // new result Item
+    var newA = document.createElement("a");
+        newA.setAttribute("id", "sc_itm"+currItemId);
+        newA.setAttribute("class", "routeToProduct1");
+        newA.setAttribute("href", "");
+
+    var newDiv = document.createElement("div");
+        newDiv.setAttribute("class", "col-sm-3 smallermarginright");
+        
+    var newForm = document.createElement("form");
+        newForm.setAttribute("id", "f_sc_itm"+currItemId);
+        newForm.setAttribute("method", "post");
+        newForm.setAttribute("action", "");
+                
+    var newInput = document.createElement("input");
+        newInput.setAttribute("name", "itm_id");
+        newInput.setAttribute("value", "itm"+currItemId);
+        newInput.setAttribute("type", "hidden");
+                
+    var newAtc = document.createElement("article");
+        newAtc.setAttribute("class", "product");
+        
+        var newFig = document.createElement("figure");
+        newFig.setAttribute("style", "background:#057E65;padding-top:10px;");
+        
+        var newImg = document.createElement("img");
+        newImg.setAttribute("src", "./img/i"+currItemId+".jpg");
+        
+        var newDiv2 = document.createElement("div");
+        newDiv2.setAttribute("class", "product-info");
+               
+        var newH2 = document.createElement("h2");
+        newH2.innerHTML = ""+name;
+        
+        var newRating = document.createElement("p");
+        newRating.setAttribute("class", "rating");
+        
+        var newP1 = document.createElement("p");
+        newP1.innerHTML = "Amount: "+amount;
+        
+        var newP2 = document.createElement("p");
+        newP2.innerHTML = "Price: "+price;
+        
+        var newP3 = document.createElement("p");
+        newP3.innerHTML = "Seller: "+seller;
+        
+        // assemble all DOMS
+        
+        // div2
+        newDiv2.appendChild(newH2);
+        newDiv2.appendChild(newRating);
+        newDiv2.appendChild(newP1);
+        newDiv2.appendChild(newP2);
+        newDiv2.appendChild(newP3);
+        
+        // article
+        newFig.appendChild(newImg);
+        newAtc.appendChild(newFig);
+        newAtc.appendChild(newDiv2);
+        
+        // form
+        newForm.appendChild(newInput);
+        newForm.appendChild(newAtc);
+        
+        // a and div
+        newDiv.appendChild(newForm);
+        newA.appendChild(newDiv);
+        
+        return newA;
+  }
+
+    function childClean(parentID){
+        var parent = document.getElementById(parentID);
+        while (parent.firstChild) {
+            parent.removeChild(parent.firstChild);
+        }
+    }
+    
+    // no diff between upper and lower
+    function itemFilter(itemArr, filterStr){
+        var resultArr = new Array();
+        var idx = 0;
+        var i = 0;
+        console.log(itemArr);
+        for (i=0; i<itemArr.length; i++){
+            if (itemArr[i][0].toLowerCase().indexOf(filterStr.toLowerCase()) !== -1){
+                resultArr[idx] = itemArr[i];
+                idx++;
+            }
+        }
+        return resultArr;
+    }
+    function searchingAndAdd(){
+        childClean("searching_result");
+        var MaxItemAmount = 4;
+        var currentItemIdx = 0;
+        
+        // Complete web3.js here.
+        // "Name","Amount","Price","Seller"
+        var items=get_item();
+        console.log(items);
+    var listDiv = document.getElementById("searching_result");
+    var inputTxt = document.getElementById("sc_input");
+
+        // if inputTxt is empty, return random first MaxItemAmount items.
+        // otherwise, filter our array to get items which name contains key words.
+        if(inputTxt.value !== ""){
+            var result = itemFilter(items, inputTxt.value);
+            items = result;
+        }
+        
+        while(currentItemIdx < MaxItemAmount && items!==null && currentItemIdx < items.length){
+            var newA = newItemElem(currentItemIdx, items[currentItemIdx][0],  items[currentItemIdx][1],  items[currentItemIdx][2],  items[currentItemIdx][3]);
+            listDiv.appendChild(newA);
+            currentItemIdx ++;
+        }
+    }
+</script>
+ <script>
+    if (typeof web3 !== 'undefined') {
+        web3 = new Web3(web3.currentProvider);
+    } else {
+        web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+    }
+
+    web3.eth.defaultAccount = web3.eth.accounts[0];
+
+    var CoursetroContract = web3.eth.contract([
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_name",
+				"type": "bytes16"
+			},
+			{
+				"name": "_amount",
+				"type": "int8"
+			},
+			{
+				"name": "_price",
+				"type": "int8"
+			}
+		],
+		"name": "sellitem",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "get_itemlist",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bytes16[]"
+			},
+			{
+				"name": "",
+				"type": "int8[]"
+			},
+			{
+				"name": "",
+				"type": "int8[]"
+			},
+			{
+				"name": "",
+				"type": "address[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Itemlist",
+		"outputs": [
+			{
+				"name": "name",
+				"type": "bytes16"
+			},
+			{
+				"name": "amount",
+				"type": "int8"
+			},
+			{
+				"name": "price",
+				"type": "int8"
+			},
+			{
+				"name": "seller",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [],
+		"name": "update_item",
+		"type": "event"
+	}
+]);
+
+    var Coursetro = CoursetroContract.at('0xd2d844dcb960f90e824e62d3c2042ff933298df2');
+    var temp;
+    Coursetro.get_itemlist(function(error, result) {
+        // temp=new Array(result[0].length);
+        if (!error) {
+            temp = result;
+            }
+            else
+            console.log(error);
+    }); 
+    function get_item(){
+        var item_list=new Array();
+        for(var i=0;i<temp[0].length;i++){
+            item_list[i]=new Array(web3.toUtf8(temp[0][i]),temp[1][i],temp[2][i],temp[3][i]);
+        }
+        console.log(item_list.length);
+        return item_list;     
+    }
+ </script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/bootstrap-slider.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.steps.min.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/bootstrap-typeahead.js"></script>
+
+</body>
+</html>

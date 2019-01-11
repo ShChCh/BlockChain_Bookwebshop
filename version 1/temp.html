@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script src="./node_modules/web3/dist/web3.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+
+        <h1>Items</h1>
+        <h2 id="Items"></h2>
+        <span id="List"></span>
+        <hr>
+
+        <label for="name" class="col-lg-2 control-label">search item name</label>
+        <input id="searchname" type="string">
+
+        <label for="name" class="col-lg-2 control-label">search item price</label>
+        <input id="searchprice" type="number">
+
+        <button id="search">search Item</button>
+
+
+    </div>
+    <div id="search_result"><ul></ul></div>
+	<a href="user_opere.html">user</a>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+    <script>
+       if (typeof web3 !== 'undefined') {
+           web3 = new Web3(web3.currentProvider);
+       } else {
+           web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+       }
+
+       web3.eth.defaultAccount = web3.eth.accounts[0];
+
+       var CoursetroContract = web3.eth.contract([
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_name",
+				"type": "bytes16"
+			},
+			{
+				"name": "_amount",
+				"type": "int8"
+			},
+			{
+				"name": "_price",
+				"type": "int8"
+			}
+		],
+		"name": "sellitem",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [],
+		"name": "update_item",
+		"type": "event"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "get_itemlist",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bytes16[]"
+			},
+			{
+				"name": "",
+				"type": "int8[]"
+			},
+			{
+				"name": "",
+				"type": "int8[]"
+			},
+			{
+				"name": "",
+				"type": "address[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "Itemlist",
+		"outputs": [
+			{
+				"name": "name",
+				"type": "bytes16"
+			},
+			{
+				"name": "amount",
+				"type": "int8"
+			},
+			{
+				"name": "price",
+				"type": "int8"
+			},
+			{
+				"name": "seller",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]);
+
+       var Coursetro = CoursetroContract.at('0xd2d844dcb960f90e824e62d3c2042ff933298df2');
+ 
+       var item_list;
+        Coursetro.get_itemlist(function(error, result) {
+           if (!error) {
+               var html='';
+               item_list=result;
+               for(var i=0;i<result[0].length;i++){
+                    html+= web3.toAscii(result[0][i])+' '+result[1][i]+' '+result[2][i]+' '+'<hr>'
+               }
+               $("#List").html(html);
+           } else
+                console.log(error);
+       });
+       $("#search").click(function() {
+        //    var result ='';
+           for(var i=0; i<item_list[0].length;i++){
+                var name = web3.toAscii(item_list[0][i]);
+                var price = item_list[1][i];
+               if(name.localeCompare($("#searchname").val())==0 && price<=$("#searchprice").val()){
+                    // search_result.push([web3.toAscii(result[0][i]),result[1][i]])
+                    document.getElementById("search_result").children[0].innerHTML += "<li>"+web3.toAscii(item_list[0][i])+"   "+item_list[1][i]+"</li>";
+                    // result+=name;
+                }
+           }
+        //    $("#search_result").html(result);
+           
+       });
+    </script>
+
+</body>
+</html>

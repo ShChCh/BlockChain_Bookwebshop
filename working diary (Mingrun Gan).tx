@@ -1,0 +1,42 @@
+Sprint 1
+Week2 05/03
+This week, I plan to go through the Solidity tutorial and search for some DApps examples on Internet. And try to build the environment of Truffle and other necessary tools.
+https://github.com/brakmic/BlockchainStore/tree/master/contracts
+https://www.udemy.com/solidity/learn/v4/t/lecture/9180246?start=0
+we also have Sprint meeting and we have to discuss the draft of Proposal of our Project.
+
+Week3 12/03
+Do some research about the Proposal part. And List the Epic and Architecture of our project. And we finish the final proposal and submit.
+
+Sprint 2
+Week4 19/03
+Assign tasks to everyone. I am response to Solidity and web3js parts. So, we have to design the structures of data we plan to use in the Solidity and have to go through the truffle tutorial.
+https://www.polarsparc.com/xhtml/Ethereum-Web-App.html
+
+
+Week5 26/03
+We try to achieve the goal which is fetching data from Blockchain by using web3js and interact with Solidity instances. Also plan to build server on AWS in order to verify user’s login.
+https://coursetro.com/courses/20/Developing-Ethereum-Smart-Contracts-for-Beginners
+
+Sprint 3
+Week6 09/04
+Build the structure of data in Solidity, basing on Item. That means we create a struct for every Item. By doing that, we could search item easily. After sending searching item request, we fetch data from Solidity.
+
+Week7 16/04
+Build whole environment in the VMWare since the truffle and testRPC support Linux better than Windows. Testing the search function and fixing bugs about web3 sync.
+https://www.youtube.com/watch?v=3681ZYbDSSk
+
+Sprint 4
+Week8 23/04
+Re-build the structure of data of Solidity since the old version cannot support the user-item structure. Also adding purchase and selling function in solidity and finish interaction part of purchase in web3js.
+http://truffleframework.com/tutorials/pet-shop
+
+Week9 30/04
+Finishing all function related to the workflow which is “selling -search- buy-pay” and the support function in the web3js. Fixing bugs and testing new web3js and Solidity function.
+
+Sprint 5
+Week10 07/05
+Finishing nickname part of user which can display the nickname instead of hash address of user in the front-end. Also try to immigrate and connect the front part and end part. Adding user verification function.
+
+week11 14/05
+Finishing the final test and fix some trivial bugs, prepare the demo and presentation.

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+
+</head>
+<body>
+    <div class="container">
+
+        <h1>Items</h1>
+        <div id="loader" style="display: none">
+                <p class="text-center">Loading...</p>
+              </div>
+        <h2 id="Items"></h2>
+            <table id = "content" class="table" style="display: none;">
+              <thead>
+                <tr>
+                <th scope="col">Seller</th>
+                  <th scope="col">Id</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">price</th>
+                  <th scope="col">amount</th>
+                </tr>
+              </thead>
+              <tbody id="List">
+              </tbody>
+            </table>
+        <hr>
+        <label for="name" class="col-lg-2 control-label">Item id</label>
+        <input id="id" type="text"> 
+
+        <!-- <label for="name" class="col-lg-2 control-label">Item Name</label> -->
+        <!-- <input id="name" type="text"> -->
+
+        <label for="name" class="col-lg-2 control-label">Item Amount</label>
+        <input id="amount" type="number">
+
+        <!-- <label for="name" class="col-lg-2 control-label">Item price</label>
+        <input id="price" type="number"> -->
+
+
+        <button id="button" onclick="buy_item();" type = "submit" >Buy Item</button>
+
+
+
+    </div>
+    <p id="accountAddress" class="text-center"></p>
+    <!-- <div id="search_result"><ul></ul></div> -->
+    <script>
+      //if vertify item and account in js then delete the part of this function in solidity
+      function buy_item(){
+        var id = $("#id").val();
+        var amount = $("#amount").val();
+        // var price = $("#price").val();
+        var item_information = get_information(id);
+        var value = amount*item_information[3].c[0]*0.0001;
+        var time= new Date().getTime();
+        console.log(amount,value,item_information[3],item_information[4].c[0]);
+        if(amount<=item_information[4].c[0] && value < App.balance){
+          App.Buy_item(item_information[0],id,amount,value,time);
+        }
+        else{
+          alert("out of stock");
+        }
+      }
+      function get_information(item_id){
+        var Item_list= App.Items_list;
+        for(var i=0;i<Item_list.length;i++){
+          if(Item_list[i][1]==item_id){
+            return Item_list[i];
+          }
+        }
+        return;
+      }
+    </script>
+       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	   <!-- Include all compiled plugins (below), or include individual files as needed -->
+	   <script src="js/bootstrap.min.js"></script>
+	   <script src="js/web3.min.js"></script>
+	   <script src="js/truffle-contract.js"></script>
+	   <script src="js/app.js"></script>
+
+</body>
+</html>

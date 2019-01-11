@@ -1,0 +1,26 @@
+Week2 05/03
+Process the first tutorial meeting and make the sprint planning meeting. See the research on blockchain and solidity. And we also made the plan on writing the proposal.
+
+Week3 12/03
+Then I was distributed for working on UI (architecture), Front-end (architecture), comments and stars (Epic) and shopping history (Epic) in proposal. Write for tasks what I was distributed in proposal and modify the contens after meeting. 
+
+Week4 19/03
+Start the sprint 2 planning meeting and do the review sprint 1 contents. Then I design the front-end UI and understand the javascript functions, events and listeners with Joey. 
+
+Week5 26/03
+First go to the tutorial in lab and then set up the environment. And start to write the front-end css implement, using bootstrap in front-end pages with Joey. 
+
+Week6 09/04
+Make the front-end pages (index, items), design pages' UI (modify css and use bootstrap for tags/DOMS for pages index, items) with handed drafts in last Sprint, finish naive javascript functions in pages with Joey. 
+
+Week7 16/04
+Prepare for the demo in lab. Modify all js functions and relevant scripts with web3.js to connect front-end with back-end and block chains with all group members. Do the BUG shooting for truffle = different coding and architecture with nontruffle version, gas limits in solidity functions, node.js meet conflication with web3.js and npm installation failure with wrong soft links with Joey. 
+
+Week8 23/04
+Write for the naive log in page and write the simple css for this page. 
+
+Week9 30/04
+Write for the interface and implement to upload multiple images to the web and get the urls, which are used to be save in block chain. 
+
+Week10 07/05
+Bug shooting: module hidden, float decision, img size, js sync, log in module js, shopping cart item amount, js post and uplpoad image. 

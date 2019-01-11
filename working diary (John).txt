@@ -1,0 +1,21 @@
+Week 2
+This week I attended our first group meeting, we decided on we were going to take the blockchain project. We started to write the project proposal. I had write the 'background', 'existing system' and 'project schedule' part of the proposal.
+
+Week 3
+This week I had gathered the parts of proposal written by other members and finished editing them into our final project proposal. I had also started doing further research on ethereum network and metamask.
+
+Week 4
+This is the start of the team's first sprint run. I continued with researching on blockchain and solidity language. I learnt about solidity data structure and smart contract design.
+
+Week 5
+This week I had set up environment for web3.js library as well as mocha and truffle. I also tried with tutorials in order to use web3.js to fetch data and interact with solidity instances.
+
+Week 6
+This week I had finished the part on making contracts for users, inventory items and categories. 
+
+Week 7
+This week I had sit down to really take the tutorial to learn how to use javascript and html languages. And then I helped modifying the js files so that it connects the back-end and front-end pages.
+
+Week 8
+This week I had tried to improve the existing user sign in model which uses passwords. My intention is to make use of the metamask provided hash addresses (both public and private) to verify users. In another words, users no longer need to have password, he or she can get verified as long as the user is signed in with metamask.
+
